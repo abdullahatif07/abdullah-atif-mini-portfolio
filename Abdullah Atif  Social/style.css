@@ -1,0 +1,289 @@
+/* ------------------------------
+   Global Reset and Base Styles
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------------------------------
+   Body Styling
+------------------------------ */
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c, #2a2a2a); /* Background gradient */
+    color: #fff; /* White text color */
+    min-height: 100vh;                  
+    -webkit-font-smoothing: antialiased; /* Smooth font on Chrome/Safari */
+    -moz-osx-font-smoothing: grayscale;  /* Smooth font on macOS */
+}
+
+/* ------------------------------
+   Hero Section
+------------------------------ */
+.hero {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px; /* Adds space from the top */
+}
+
+
+/* ------------------------------
+   Profile Picture Styling
+------------------------------ */
+.container .profile-pic {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    transition: all 0.4s ease;
+}
+
+/* Hover Effect for Profile Picture */
+.container .profile-pic:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    border-color: #e6dcdc;
+    filter: brightness(1.2) contrast(1.1);
+}
+
+/* ------------------------------
+   Name and Headline Styling
+------------------------------ */
+.container .name {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    color: #e1cfcf;
+}
+
+.container .headline {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+/* ------------------------------
+   Social Links Container
+------------------------------ */
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ------------------------------
+   Social Buttons
+------------------------------ */
+.social .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    background-color: #8b8b8b;
+    height: 50px;
+    width: 80%; /* Button width */
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Social Icons */
+.social .social-logo {
+    height: 24px;
+    width: 24px;
+}
+
+/* ------------------------------
+   Individual Icon Adjustments
+------------------------------ */
+#linkedin-logo {
+    margin-right: 20px;
+    filter: invert(100%) brightness(90%);
+}
+
+#instagram-logo {
+    margin-right: 8px;
+    filter: invert(100%) brightness(90%);
+}
+
+#x-logo {
+    margin-right: 15px;
+    filter: invert(100%) brightness(100%);
+}
+
+#github-logo {
+    margin-right: 35px;
+    filter: invert(100%) brightness(90%);
+}
+
+#snapchat-logo {
+    margin-right: 15px;
+    filter: invert(10%) brightness(80%);
+}
+
+/* ------------------------------
+   General Button Hover
+------------------------------ */
+.social .btn:hover {
+    transform: scale(1.08) translateY(0);             /* Slight zoom */
+    filter: brightness(1.15);           /* Slight glow */
+    cursor: pointer;                    /* Pointer cursor */
+}
+
+/* ------------------------------
+   Platform-Specific Button Colors
+------------------------------ */
+
+/* GitHub */
+.btn.github {
+    background-color: #333; /* GitHub dark */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(51, 51, 51, 0.4);
+}
+
+/* X / Twitter */
+.btn.x {
+    background-color: #211f1f; /* Black button background */
+    color: #fff;
+    box-shadow: 0 0 2px rgba(152, 153, 153, 0.5); /* Subtle glow */
+}
+
+/* LinkedIn */
+.btn.linkedin {
+    background-color: #0A66C2; /* LinkedIn blue */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+}
+
+/* Instagram */
+.btn.instagram {
+    background-color: #c13584; /* Instagram pink */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(193, 53, 132, 0.4);
+}
+
+/* Snapchat */
+.btn.snapchat {
+    background-color: #fffb00; /* Snapchat yellow */
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 251, 0, 0.4);
+}
+
+/* ------------------------------
+   Hover Effects (Individual)
+------------------------------ */
+
+/* GitHub */
+.btn.github:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(51, 51, 51, 0.4);
+}
+
+/* X / Twitter */
+.btn.x:hover {
+    background-color: #111; /* Slightly lighter black */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(214, 217, 219, 0.4); /* Subtle glow */
+}
+
+/* LinkedIn */
+.btn.linkedin:hover {
+    background-color: #0A66C2;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+}
+
+/* Instagram */
+.btn.instagram:hover {
+    background-color: #c13584;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(193, 53, 132, 0.4);
+}
+
+/* Snapchat */
+.btn.snapchat:hover {
+    background-color: #fffb00;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 251, 0, 0.4);
+}
+
+/* ------------------------------
+   Footer Styling
+------------------------------ */
+footer {
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .container .profile-pic {
+    height: 110px;
+    width: 110px;
+  }
+
+  .container .name {
+    font-size: 1.5rem;
+  }
+
+  .container .headline {
+    font-size: 0.9rem;
+  }
+
+  .social .btn {
+    width: 90%;
+    height: 60px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .container .profile-pic {
+    height: 110px;
+    width: 110px;
+  }
+
+  .social .btn {
+    width: 80%;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ------------------------------
+   ANIMATIONS
+------------------------------ */
+
+/* Fade-in animation for the whole page */
+body {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.social .btn:nth-child(1) { animation-delay: 0.3s; }
+.social .btn:nth-child(2) { animation-delay: 0.45s; }
+.social .btn:nth-child(3) { animation-delay: 0.6s; }
+.social .btn:nth-child(4) { animation-delay: 0.75s; }
