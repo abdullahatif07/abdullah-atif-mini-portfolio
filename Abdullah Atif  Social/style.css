@@ -254,6 +254,9 @@ footer {
 
 /* Mobile (≤480px) */
 @media (max-width: 480px) {
+   body{
+      min-height: 90vh;
+   }
   .container .profile-pic {
     height: 110px;
     width: 110px;
@@ -437,3 +440,4 @@ body.dark .dark-toggle {
     color: #fff; /* white icon/text */
     box-shadow: 0 4px 15px rgba(255,255,255,0.1); /* subtle shadow */
 }
+
