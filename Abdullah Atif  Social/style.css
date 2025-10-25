@@ -14,8 +14,8 @@
 body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(135deg, #0a0a0a, #1c1c1c, #2a2a2a); /* Background gradient */
-    color: #fff; /* White text color */
+    /*I have to add background/background-color*/
+    color: #000; /* White text color */
     min-height: 100vh;                  
     -webkit-font-smoothing: antialiased; /* Smooth font on Chrome/Safari */
     -moz-osx-font-smoothing: grayscale;  /* Smooth font on macOS */
@@ -42,7 +42,7 @@ body {
     width: 120px;
     border-radius: 50%; /* Circular image */
     margin-bottom: 20px;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     transition: all 0.4s ease;
 }
 
@@ -50,8 +50,8 @@ body {
 .container .profile-pic:hover {
     transform: scale(1.25);
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
-    border-color: #e6dcdc;
-    filter: brightness(1.2) contrast(1.1);
+    border-color: #322e2e;
+    filter: brightness(1.1) contrast(1.1);
 }
 
 /* ------------------------------
@@ -60,12 +60,12 @@ body {
 .container .name {
     margin-bottom: 5px;
     font-size: 1.8rem;
-    color: #e1cfcf;
+    color: #333;
 }
 
 .container .headline {
     font-size: 1rem;
-    color: #aaa;
+    color: #369;
     margin-bottom: 25px;
 }
 
@@ -88,8 +88,8 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #000;
-    background-color: #8b8b8b;
+    color: #000; /*override by individual brand colors */
+    background-color: #8b8b8b; /*override by individual brand colors */
     height: 50px;
     width: 80%; /* Button width */
     border-radius: 8px;
@@ -140,83 +140,80 @@ body {
     cursor: pointer;                    /* Pointer cursor */
 }
 
+
 /* ------------------------------
-   Platform-Specific Button Colors
+   Platform-Specific Button Colors - Light Theme
 ------------------------------ */
 
 /* GitHub */
 .btn.github {
-    background-color: #333; /* GitHub dark */
-    color: #fff;
-    box-shadow: 0 0 20px rgba(51, 51, 51, 0.4);
+    background-color: #24292f; /* GitHub dark gray */
+    color: #fff; /* white text */
+    box-shadow: 0 2px 8px rgba(36, 41, 47, 0.3); /* subtle shadow */
 }
 
 /* X / Twitter */
 .btn.x {
-    background-color: #211f1f; /* Black button background */
-    color: #fff;
-    box-shadow: 0 0 2px rgba(152, 153, 153, 0.5); /* Subtle glow */
+    background-color: #1da1f2; /* Twitter blue */
+    color: #fff; /* white text */
+    box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
 }
 
 /* LinkedIn */
 .btn.linkedin {
     background-color: #0A66C2; /* LinkedIn blue */
     color: #fff;
-    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+    box-shadow: 0 2px 8px rgba(10, 102, 194, 0.3);
 }
 
 /* Instagram */
 .btn.instagram {
-    background-color: #c13584; /* Instagram pink */
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); /* Instagram gradient */
     color: #fff;
-    box-shadow: 0 0 20px rgba(193, 53, 132, 0.4);
+    box-shadow: 0 2px 8px rgba(193, 53, 132, 0.3);
 }
 
 /* Snapchat */
 .btn.snapchat {
-    background-color: #fffb00; /* Snapchat yellow */
-    color: #000;
-    box-shadow: 0 0 20px rgba(255, 251, 0, 0.4);
+    background-color: #fffc00; /* bright yellow */
+    color: #000; /* black text */
+    box-shadow: 0 2px 8px rgba(255, 251, 0, 0.3);
 }
 
 /* ------------------------------
-   Hover Effects (Individual)
+   Hover Effects - Refined Light Theme
 ------------------------------ */
 
 /* GitHub */
 .btn.github:hover {
-    background-color: #333;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(51, 51, 51, 0.4);
+    background-color: #1b1f23; /* slightly darker gray */
+    box-shadow: 0 4px 12px rgba(36, 41, 47, 0.4);
 }
 
 /* X / Twitter */
 .btn.x:hover {
-    background-color: #111; /* Slightly lighter black */
-    color: #fff;
-    box-shadow: 0 0 10px rgba(214, 217, 219, 0.4); /* Subtle glow */
+    background-color: #0d95e8; /* slightly darker blue */
+    box-shadow: 0 4px 12px rgba(29, 161, 242, 0.4);
 }
 
 /* LinkedIn */
 .btn.linkedin:hover {
-    background-color: #0A66C2;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+    background-color: #005fa3; /* darker blue */
+    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.4);
 }
 
 /* Instagram */
 .btn.instagram:hover {
-    background-color: #c13584;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(193, 53, 132, 0.4);
+    background: linear-gradient(45deg, #e9741f, #c6216f, #6e2b9f); /* darker gradient */
+    box-shadow: 0 4px 12px rgba(193, 53, 132, 0.4);
 }
 
 /* Snapchat */
 .btn.snapchat:hover {
-    background-color: #fffb00;
-    color: #000;
-    box-shadow: 0 0 20px rgba(255, 251, 0, 0.4);
+    background-color: #fff200; /* slightly darker yellow */
+    box-shadow: 0 4px 12px rgba(255, 251, 0, 0.4);
 }
+
 
 /* ------------------------------
    Footer Styling
@@ -225,7 +222,7 @@ footer {
     text-align: center;
     margin-top: auto;
     font-size: 0.8rem;
-    color: #777;
+    color: #389;
 }
 
 
@@ -287,3 +284,156 @@ body {
 .social .btn:nth-child(2) { animation-delay: 0.45s; }
 .social .btn:nth-child(3) { animation-delay: 0.6s; }
 .social .btn:nth-child(4) { animation-delay: 0.75s; }
+
+
+
+
+/* ================================
+   Floating Dark Mode Toggle Button
+================================= */
+.dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+/* hover property on toggle button */
+.dark-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* ================================
+   Dark Mode Styling
+================================= */
+
+/* Body background and text color for dark mode */
+body.dark {
+    background: linear-gradient(135deg, #121212, #1a1a1a); /* subtle dark gradient */
+    color: #e0e0e0; /* light text for contrast */
+}
+
+/* Profile picture border in dark mode */
+body.dark .profile-pic {
+    border-color: #fff; /* white border */
+}
+
+/* Profile picture hover effects in dark mode */
+body.dark .profile-pic:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); /* glow effect */
+    border-color: #e6dcdc; /* lighter border on hover */
+    filter: brightness(1.2) contrast(1.1); /* enhance brightness and contrast */
+}
+
+/* Name text color in dark mode */
+body.dark .name {
+    color: #e1cfcf; /* soft light color */
+}
+
+/* Headline text color in dark mode */
+body.dark .headline {
+    color: #aaa; /* medium gray for less prominence */
+}
+
+/* General button styling in dark mode */
+body.dark .btn {
+    color: #000; /* dark text on buttons */
+    background-color: #8b8b8b; /* medium gray button background */
+}
+
+/* ------------------------------
+   Platform-Specific Button Colors for Dark Mode
+------------------------------ */
+
+/* GitHub button */
+body.dark .btn.github {
+    background-color: #333; /* dark gray background */
+    color: #fff; /* white text */
+    box-shadow: 0 0 20px rgba(51, 51, 51, 0.4); /* subtle glow */
+}
+
+/* X / Twitter button */
+body.dark .btn.x {
+    background-color: #211f1f; /* very dark button */
+    color: #fff; /* white text */
+    box-shadow: 0 0 2px rgba(152, 153, 153, 0.5); /* subtle glow */
+}
+
+/* LinkedIn button */
+body.dark .btn.linkedin {
+    background-color: #0A66C2; /* LinkedIn brand blue */
+    color: #fff; /* white text */
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4); /* glow matching brand color */
+}
+
+/* Instagram button */
+body.dark .btn.instagram {
+    background-color: #c13584; /* Instagram pink */
+    color: #fff; /* white text */
+    box-shadow: 0 0 20px rgba(193, 53, 132, 0.4); /* pink glow */
+}
+
+/* Snapchat button */
+body.dark .btn.snapchat {
+    background-color: #fffb00; /* bright yellow */
+    color: #000; /* black text for contrast */
+    box-shadow: 0 0 20px rgba(255, 251, 0, 0.4); /* yellow glow */
+}
+
+/* ------------------------------
+   Hover Effects (Individual)
+------------------------------ */
+
+/* GitHub hover */
+body.dark .btn.github:hover {
+    background-color: #333; /* maintain dark gray */
+    color: #fff; /* keep white text */
+    box-shadow: 0 0 20px rgba(51, 51, 51, 0.4); /* glow effect on hover */
+}
+
+/* X / Twitter hover */
+body.dark .btn.x:hover {
+    background-color: #111; /* slightly darker black */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(214, 217, 219, 0.4); /* subtle glow */
+}
+
+/* LinkedIn hover */
+body.dark .btn.linkedin:hover {
+    background-color: #0A66C2; /* keep brand blue */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4); /* glow effect */
+}
+
+/* Instagram hover */
+body.dark .btn.instagram:hover {
+    background-color: #c13584; /* keep pink */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(193, 53, 132, 0.4); /* glow effect */
+}
+
+/* Snapchat hover */
+body.dark .btn.snapchat:hover {
+    background-color: #fffb00; /* keep yellow */
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 251, 0, 0.4); /* yellow glow */
+}
+
+/* Dark mode toggle button styling in dark mode */
+body.dark .dark-toggle {
+    background-color: #222; /* dark background */
+    color: #fff; /* white icon/text */
+    box-shadow: 0 4px 15px rgba(255,255,255,0.1); /* subtle shadow */
+}
